@@ -141,13 +141,3 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICEN
 Contribuições são bem-vindas! Por favor, abra uma issue ou envie um pull request.
 
 ---
-
-## 📞 Contato
-
-Hellerson M. B. C. Silva  
-Email: seu.email@exemplo.com  
-LinkedIn: https://linkedin.com/in/seu-perfil
-
----
-
-Feito com ❤️ por Hellerson
