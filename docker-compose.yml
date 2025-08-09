@@ -2,7 +2,29 @@ version: "3.9"
 
 services:
   coletor:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.coletor
+    container_name: crypto_tracker-coletor-1
     volumes:
-      - ./data/historical:/data/historical
-    command: python main.py
+      - ./app:/app
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD-SHELL", "test -d data/historical || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: crypto_tracker-dashboard-1
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app:/app
+      - ./data:/app/data
+    depends_on:
+      coletor:
+        condition: service_healthy

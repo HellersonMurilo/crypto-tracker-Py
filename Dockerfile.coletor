@@ -1,0 +1,12 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Correctly copy the requirements.txt from the app directory
+COPY app/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Correctly copy the main.py from the app directory
+COPY app/main.py .
+
+CMD ["python", "main.py"]

@@ -139,5 +139,3 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICEN
 ## 🤝 Contribuições
 
 Contribuições são bem-vindas! Por favor, abra uma issue ou envie um pull request.
-
----
